@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gamecontainer{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.robo{
+    background-image: url(robot.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 103px;
+    height: 114px;
+    position: absolute;
+    bottom: 0;
+    left: 72px;
+}
+
+.obstacle{
+    width: 100px;
+    height: 113px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+}
+
+.animaterobo{
+    animation: robo 0.6s linear;
+}
+
+.gameover{
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#scorecont{
+    position: absolute;
+    right: 23px;
+    color: cornsilk;
+    font-weight: bold;
+    top: 23px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    width: 112px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+
+@keyframes robo{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
